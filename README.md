@@ -1,4 +1,4 @@
-🩺 Dose Guardian – Intelligent Pill-Taking Assistant
+**🩺 Dose Guardian – Intelligent Pill-Taking Assistant**
 
 📌 **Project Overview**
 
@@ -7,7 +7,7 @@ The system uses a Real-Time Clock (RTC) to track current time and compares it wi
 
 This project demonstrates practical implementation of real-time systems, peripheral interfacing, and modular firmware design.
 
-🎯 Objective
+**🎯 Objective**
 
 To design and implement a standalone embedded system that:
 
@@ -19,7 +19,7 @@ Automatically reminds user at the correct time
 
 Operates without internet or mobile dependency
 
-⚙️ System Features
+**⚙️ System Features**
 
 RTC-based real-time clock monitoring
 
@@ -35,7 +35,7 @@ Modular multi-file Embedded C implementation
 
 Simulated and verified using Proteus
 
-🧩 Hardware Components
+**🧩 Hardware Components**
 
 LPC2124 / LPC21xx ARM7 Microcontroller
 
@@ -49,7 +49,7 @@ LED
 
 Buzzer / Speaker
 
-🛠 Software Tools Used
+**🛠 Software Tools Used**
 
 Embedded C
 
@@ -59,7 +59,7 @@ Proteus 8 Professional (Simulation)
 
 Flash Magic
 
-🔍 Working Principle
+**🔍 Working Principle**
 
 1️⃣ System Initialization
 
@@ -110,7 +110,7 @@ User acknowledges using keypad.
 
 System resets alert and continues monitoring.
 
-🧠 Embedded Concepts Demonstrated
+**🧠 Embedded Concepts Demonstrated**
 
 Embedded C Programming
 
@@ -126,7 +126,7 @@ Modular Firmware Architecture
 
 Input Validation Techniques
 
-🏥 Applications
+**🏥 Applications**
 
 Smart healthcare systems
 
@@ -136,7 +136,7 @@ Elderly care reminder systems
 
 Real-time embedded monitoring applications
 
-🚀 Future Enhancements
+**🚀 Future Enhancements**
 
 Support for multiple medicine schedules
 
@@ -146,7 +146,7 @@ GSM / Bluetooth alert system
 
 Mobile application integration
 
-👨‍💻 Developed by
+**👨‍💻 Developed by**
 
 Korada Praveen Kumar
 
