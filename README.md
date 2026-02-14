@@ -1,0 +1,2 @@
+# Dose-Guardian-Intelligent-Pill-Taking-Assistant
+DoseGuardian is an embedded systems–based intelligent medication reminder designed to ensure timely medicine intake and improve patient health management. The system is built using an ARM7 microcontroller (LPC2148) and integrates a Real-Time Clock (RTC), LCD display, keypad interface, LEDs, and buzzer for accurate scheduling and alert generation.
