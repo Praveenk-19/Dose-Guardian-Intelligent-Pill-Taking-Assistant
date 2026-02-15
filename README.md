@@ -1,155 +1,185 @@
-**🩺 Dose Guardian – Intelligent Pill-Taking Assistant**
+# 💊 DoseGuardian – Intelligent Pill-Taking Assistant
 
-📌 **Project Overview**
+An Embedded Systems project designed to remind patients to take medicine on time using RTC, LCD Display, Keypad Interface, LED indication, and Buzzer alert.
 
-DoseGuardian is a real-time embedded healthcare reminder system developed using LPC21xx ARM7 microcontroller and Embedded C.
-The system uses a Real-Time Clock (RTC) to track current time and compares it with a user-configured medicine schedule. When both times match, the system generates an alert using an LCD display, LED, and buzzer.
+---
 
-This project demonstrates practical implementation of real-time systems, peripheral interfacing, and modular firmware design.
+## 📌 Project Overview
 
-**🎯 Objective**
+DoseGuardian is a real-time medicine reminder system built using **LPC2148 ARM7 Microcontroller**.  
+It allows users to:
 
-To design and implement a standalone embedded system that:
+- Set current RTC time
+- Configure medicine intake time
+- Receive alerts at scheduled time
+- Confirm medicine intake
+- Detect missed doses
 
-Tracks real time using RTC
+This system improves medication adherence using an interactive embedded interface.
 
-Allows user to configure medicine schedule
+---
 
-Automatically reminds user at the correct time
+## 🛠️ Hardware Components
 
-Operates without internet or mobile dependency
+- LPC2148 ARM7 Microcontroller
+- 16x2 LCD (LM016L)
+- 4x4 Matrix Keypad
+- RTC (Internal)
+- Buzzer
+- LED Indicator
+- Pull-up Resistors
+- Power Supply
 
-**⚙️ System Features**
+---
 
-RTC-based real-time clock monitoring
+## 🖥️ System Architecture
 
-Menu-driven LCD user interface
+![Complete Circuit Diagram](images/system_overview.png)
 
-Keypad-based time configuration
+---
 
-Automatic medicine reminder alert
+## 📸 Working Screens & Functional Flow
 
-LED and buzzer notification
+---
 
-Modular multi-file Embedded C implementation
+### 🕒 1️⃣ RTC Display (Current Time & Date)
 
-Simulated and verified using Proteus
+The system continuously displays real-time clock data.
 
-**🧩 Hardware Components**
+![RTC Display](images/rtc_display.png)
 
-LPC2124 / LPC21xx ARM7 Microcontroller
+---
 
-RTC (Real-Time Clock)
+### ⚙️ 2️⃣ Main Menu
 
-16×2 LCD Display
+User can select:
+- Edit RTC
+- Edit Medicine Time
+- Exit
 
-4×4 Matrix Keypad
+![Main Menu](images/main_menu.png)
 
-LED
+---
 
-Buzzer / Speaker
+### ⏰ 3️⃣ Edit RTC Menu
 
-**🛠 Software Tools Used**
+User selects:
+- Hours
+- Minutes
+- Seconds
 
-Embedded C
+![RTC Edit Menu](images/rtc_edit.png)
 
-Keil µVision IDE
+---
 
-Proteus 8 Professional (Simulation)
+### 💾 4️⃣ RTC Time Saved Confirmation
 
-Flash Magic
+After updating time, confirmation is displayed.
 
-**🔍 Working Principle**
+![RTC Saved](images/rtc_saved.png)
 
-1️⃣ System Initialization
+---
 
-LCD, RTC, and keypad peripherals are initialized.
-Default menu is displayed on the LCD.
+### 💊 5️⃣ Medicine Time Saved
 
-2️⃣ RTC Configuration
+After configuring medicine time.
 
-User sets current hour, minute, second, date.
+![Medicine Time Saved](images/med_time_saved.png)
 
-Values are written into RTC registers.
+---
 
-File Reference: Edit_RTC_Time.c
+### 🔔 6️⃣ Medicine Alert
 
-3️⃣ Medicine Time Setup
+When medicine time matches RTC time:
 
-User configures medicine intake time using keypad.
+- Buzzer activates
+- LED blinks
+- LCD shows alert
 
-Values are stored for comparison.
+![Take Medicine Alert](images/take_medicine.png)
 
-File Reference: Edit_MEDICINE_Time.c
+---
 
-4️⃣ Continuous Time Monitoring
+### ❌ 7️⃣ Missed Dose Detection
 
-RTC continuously updates current time.
+If user does not confirm within predefined time:
 
-System periodically reads RTC registers.
+![Missed Dose](images/missed_dose.png)
 
-File Reference: rtc.c
+---
 
-5️⃣ Time Comparison Logic
+### ✅ 8️⃣ Medicine Intake Confirmation
 
-Current RTC time is compared with medicine time.
+After user confirmation:
 
-When hour, minute, and second match → alert condition triggered.
+![Medicine Completed](images/medicine_completed.png)
 
-File Reference: compare_rtc_with_med_time.c
+---
 
-6️⃣ Alert Mechanism
+## 🔄 System Workflow
 
-LCD displays reminder message.
+1. System initializes RTC and LCD
+2. User sets RTC time
+3. User sets Medicine Time
+4. RTC runs continuously
+5. When RTC == Medicine Time:
+   - Buzzer ON
+   - LED ON
+   - LCD Alert Displayed
+6. User confirms intake
+7. If no confirmation → Missed Dose alert
 
-LED glows.
+---
 
-Buzzer activates.
+## 💡 Key Features
 
-User acknowledges using keypad.
+✔ Real-Time Clock Integration  
+✔ User-Friendly LCD Interface  
+✔ Missed Dose Detection  
+✔ Alert System (LED + Buzzer)  
+✔ Interactive Keypad Navigation  
+✔ Embedded C Implementation  
 
-System resets alert and continues monitoring.
+---
 
-**🧠 Embedded Concepts Demonstrated**
+## 🧠 Embedded Concepts Used
 
-Embedded C Programming
+- GPIO Configuration
+- LCD Interfacing (8-bit Mode)
+- Matrix Keypad Scanning
+- RTC Configuration
+- Interrupt Handling
+- Delay Routines
+- State Machine Logic
 
-RTC Register Programming
+---
 
-LCD Interfacing
+## 🚀 Applications
 
-Keypad Matrix Scanning
+- Elderly Patient Care
+- Hospital Monitoring Systems
+- Smart Home Healthcare
+- Personal Medicine Reminder Device
 
-Real-Time Comparison Logic
+---
 
-Modular Firmware Architecture
+## 🎯 Future Improvements
 
-Input Validation Techniques
+- GSM Notification System
+- IoT Integration
+- Mobile App Synchronization
+- Multiple Medicine Scheduling
+- EEPROM Storage
 
-**🏥 Applications**
+---
 
-Smart healthcare systems
+## 👨‍💻 Developed By
 
-Assistive medical devices
+**Korada Praveen Kumar**  
+Electronics and Communication Engineer  
 
-Elderly care reminder systems
+---
 
-Real-time embedded monitoring applications
+## 📜 License
 
-**🚀 Future Enhancements**
-
-Support for multiple medicine schedules
-
-EEPROM-based persistent storage
-
-GSM / Bluetooth alert system
-
-Mobile application integration
-
-**👨‍💻 Developed by**
-
-Korada Praveen Kumar
-
-Embedded Systems Engineer
-
-Skills: Embedded C | LPC21xx | RTC | Real-Time Systems | Proteus
+This project is developed for educational and demonstration purposes.
