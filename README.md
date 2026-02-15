@@ -46,7 +46,7 @@ This system improves medication adherence using an interactive embedded interfac
 
 The system continuously displays real-time clock data.
 
-![RTC Display](images/rtc_display.png)
+![RTC Display](images/rtc_time.jpeg)
 
 ---
 
