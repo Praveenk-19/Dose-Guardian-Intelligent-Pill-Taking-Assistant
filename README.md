@@ -34,7 +34,7 @@ This system improves medication adherence using an interactive embedded interfac
 
 ## 🖥️ System Architecture
 
-![Complete Circuit Diagram](images/system_overview.png)
+![Complete Circuit Diagram](images/project_output.jpeg)
 
 ---
 
@@ -57,7 +57,7 @@ User can select:
 - Edit Medicine Time
 - Exit
 
-![Main Menu](images/main_menu.png)
+![Main Menu](images/main_menu.jpeg)
 
 ---
 
@@ -68,7 +68,7 @@ User selects:
 - Minutes
 - Seconds
 
-![RTC Edit Menu](images/rtc_edit.png)
+![RTC Edit Menu](images/rtc_time_set.jpeg)
 
 ---
 
@@ -76,7 +76,7 @@ User selects:
 
 After updating time, confirmation is displayed.
 
-![RTC Saved](images/rtc_saved.png)
+![RTC Saved](images/rtc_time_saved.jpeg)
 
 ---
 
@@ -84,7 +84,7 @@ After updating time, confirmation is displayed.
 
 After configuring medicine time.
 
-![Medicine Time Saved](images/med_time_saved.png)
+![Medicine Time Saved](images/medicine_time_saved.jpeg)
 
 ---
 
@@ -96,7 +96,7 @@ When medicine time matches RTC time:
 - LED blinks
 - LCD shows alert
 
-![Take Medicine Alert](images/take_medicine.png)
+![Take Medicine Alert](images/medicine_remainder.jpeg)
 
 ---
 
@@ -104,7 +104,7 @@ When medicine time matches RTC time:
 
 If user does not confirm within predefined time:
 
-![Missed Dose](images/missed_dose.png)
+![Missed Dose](images/medicine_missed.jpeg)
 
 ---
 
@@ -112,7 +112,7 @@ If user does not confirm within predefined time:
 
 After user confirmation:
 
-![Medicine Completed](images/medicine_completed.png)
+![Medicine Completed](images/medicine_taken.jpeg)
 
 ---
 
