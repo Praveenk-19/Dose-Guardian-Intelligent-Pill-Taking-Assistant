@@ -90,3 +90,4 @@ char ReadKeyVal(void)
    /* Get key value from lookup table */
    return (LUT[RowVal][ColVal]);
 }
+
