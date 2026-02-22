@@ -22,28 +22,61 @@ The system focuses on improving healthcare compliance while showcasing practical
 
 ---
 
-## 🛠️ Key Features
+## ⚙️ Working Principle
 
-✔ **Real-Time Scheduling**  
-Reminds users when it’s time to take their medicine using an onboard Real-Time Clock (RTC).
+## 1️⃣ Setting the Medicine Schedule 
 
-✔ **Intuitive LCD Interface**  
-Displays current time, medicine schedules, alerts, and configuration menus.
+- User presses Switch1
 
-✔ **User Input via Keypad**  
-Configure current time and medicine times easily.
+- Enters medicine time via keypad
 
-✔ **Alert System**  
-When it’s time to take medicine:
-- Buzzer alarm sounds
-- LCD displays notification.
+- Schedule is stored in microcontroller memory
 
-✔ **Missed Dose Detection**  
-Tracks if the user didn’t confirm intake and indicates missed doses.
-- Red LED turns ON (Indicates Medicine Missed)
+- LCD displays stored schedule along with RTC info
 
-✔ **Modular Embedded C Implementation**  
-Clean code organization with source and header files that make future enhancements easier.
+## 2️⃣ Real-Time Monitoring
+
+- Microcontroller continuously checks RTC time
+
+- Compares current time with stored medicine schedule
+
+## 3️⃣ Alert Mechanism
+
+- When time matches: LCD displays: “Take Medicine Now”
+
+- Buzzer toggles ON/OFF at specific intervals
+
+## 4️⃣ User Acknowledgment
+
+- User presses Switch2
+
+- If acknowledged → system resets and continues monitoring
+
+- If NOT acknowledged within defined time → Red LED turns ON (Missed Dose)
+
+---
+
+## 📦 Hardware Components Used
+
+| Component | Role |
+|-----------|------|
+| **LPC2148 ARM7 Microcontroller** | Main processing unit |
+| **16×2 LCD Display (LM016L)** | Visual interface |
+| **4×4 Matrix Keypad** | Input device |
+| **Real-Time Clock (RTC)** | Timekeeping |
+| **Buzzer** | Audio alert |
+| **LED Indicator** | Visual alert |
+| **Pull-up Resistors & Power Supply** | Circuit support | 
+
+---
+
+## 💻 Software & Tools
+
+- Embedded C  
+- Keil µVision IDE  
+- Flash Magic  
+- Proteus (Simulation)  
+- ARM7 LPC21xx Libraries  
 
 ---
 
@@ -130,20 +163,6 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 
 5. **User Confirmation**  
    User confirms intake using the switch-2.
-
----
-
-## 📦 Hardware Components Used
-
-| Component | Role |
-|-----------|------|
-| **LPC2148 ARM7 Microcontroller** | Main processing unit |
-| **16×2 LCD Display (LM016L)** | Visual interface |
-| **4×4 Matrix Keypad** | Input device |
-| **Real-Time Clock (RTC)** | Timekeeping |
-| **Buzzer** | Audio alert |
-| **LED Indicator** | Visual alert |
-| **Pull-up Resistors & Power Supply** | Circuit support | 
 
 ---
 
