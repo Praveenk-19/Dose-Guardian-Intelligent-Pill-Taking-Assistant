@@ -1,7 +1,7 @@
 # 📦 DoseGuardian — Intelligent Pill-Taking Assistant
 
 **DoseGuardian** is an embedded systems-based intelligent medication reminder designed to ensure timely medicine intake and improve patient health management.  
-Built on an ARM7 microcontroller (LPC2148), this system integrates a real-time clock, LCD display, keypad interface, LED indicators, and buzzer alerts for accurate medicine scheduling and user interaction. :contentReference[oaicite:0]{index=0}
+Built on an ARM7 microcontroller (LPC21xx), this system integrates a real-time clock, LCD display, keypad interface, LED indicators, and buzzer alerts for accurate medicine scheduling and user interaction.
 
 ---
 
@@ -14,7 +14,7 @@ This project aims to:
 - Develop a reliable **real-time medicine reminder system** using an ARM7 microcontroller.
 - Implement accurate time tracking using an integrated **Real-Time Clock (RTC)** module.
 - Design a user-friendly interface using a **16×2 LCD display and 4×4 matrix keypad**.
-- Trigger visual and audio alerts (LED & buzzer) when scheduled medicine time is reached.
+- Trigger visual and audio alerts (buzzer) when scheduled medicine time is reached.
 - Detect and indicate missed doses to improve medication adherence.
 - Demonstrate modular and structured **Embedded C firmware development**.
 
@@ -25,25 +25,25 @@ The system focuses on improving healthcare compliance while showcasing practical
 ## 🛠️ Key Features
 
 ✔ **Real-Time Scheduling**  
-Reminds users when it’s time to take their medicine using an onboard Real-Time Clock (RTC). :contentReference[oaicite:2]{index=2}
+Reminds users when it’s time to take their medicine using an onboard Real-Time Clock (RTC).
 
 ✔ **Intuitive LCD Interface**  
-Displays current time, medicine schedules, alerts, and configuration menus. :contentReference[oaicite:3]{index=3}
+Displays current time, medicine schedules, alerts, and configuration menus.
 
 ✔ **User Input via Keypad**  
-Configure current time and medicine times easily. :contentReference[oaicite:4]{index=4}
+Configure current time and medicine times easily.
 
 ✔ **Alert System**  
 When it’s time to take medicine:
 - Buzzer alarm sounds
-- LED blinks
-- LCD displays notification :contentReference[oaicite:5]{index=5}
+- LCD displays notification.
 
 ✔ **Missed Dose Detection**  
-Tracks if the user didn’t confirm intake and indicates missed doses. :contentReference[oaicite:6]{index=6}
+Tracks if the user didn’t confirm intake and indicates missed doses.
+- Red LED turns ON (Indicates Medicine Missed)
 
 ✔ **Modular Embedded C Implementation**  
-Clean code organization with source and header files that make future enhancements easier. :contentReference[oaicite:7]{index=7}
+Clean code organization with source and header files that make future enhancements easier.
 
 ---
 
@@ -94,7 +94,7 @@ When the RTC time matches the scheduled medicine time:
 ### ⚙️ 4️⃣ Complete Circuit Simulation
 Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer, and LED connections.
 
-![Complete Simulation](images/proteus_full_simulation.png)
+![Complete Simulation](images/Proteus_full_simulation.png)
 
 **Verified:**
 - Pin configuration correctness  
@@ -115,22 +115,21 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 ## 🧪 How It Works (User Flow)
 
 1. **Power On & Initialize**  
-   System initializes RTC and LCD. :contentReference[oaicite:8]{index=8}
+   System initializes RTC and LCD.
 
 2. **Set Current Time**  
-   Navigate using keypad to update the RTC time. :contentReference[oaicite:9]{index=9}
+   Navigate using keypad to update the RTC time.
 
 3. **Configure Medicine Time**  
-   Enter medicine reminders (hours/minutes). :contentReference[oaicite:10]{index=10}
+   Enter medicine reminders (hours/minutes).
 
 4. **Reminder & Alerts**  
    When the current time matches the medicine time:  
-   - Buzzer sounds  
-   - LED blinks  
-   - LCD displays alert :contentReference[oaicite:11]{index=11}
+   - Buzzer sounds   
+   - LCD displays alert 
 
 5. **User Confirmation**  
-   User confirms intake using the keypad. :contentReference[oaicite:12]{index=12}
+   User confirms intake using the switch-2.
 
 ---
 
@@ -144,7 +143,7 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 | **Real-Time Clock (RTC)** | Timekeeping |
 | **Buzzer** | Audio alert |
 | **LED Indicator** | Visual alert |
-| **Pull-up Resistors & Power Supply** | Circuit support | :contentReference[oaicite:13]{index=13}
+| **Pull-up Resistors & Power Supply** | Circuit support | 
 
 ---
 
@@ -157,24 +156,22 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 
 ---
 
-## 🌱 Future Improvements
+## 🚀 Applications
 
-- **GSM / IoT Notifications** — send reminders via SMS or mobile app
-- **Multiple Medicine Scheduling**
-- **EEPROM Storage for Persistent Settings**
-- **Voice Alerts or Mobile Integration**
+- Elderly Patient Care
+- Hospital Monitoring Systems
+- Smart Home Healthcare
+- Personal Medicine Reminder Device
 
 ---
 
-## 🛠️ How To Build & Run
+## 🎯 Future Improvements
 
-1. Clone the repository  
-2. Open firmware in your preferred IDE/toolchain (e.g., Keil uVision)
-3. Compile and generate the hex
-4. Load the hex onto LPC2148 using programmer
-5. Connect hardware and test
-
-*(Detailed instructions can be added to `docs/Installation.md`)*
+- GSM Notification System
+- IoT Integration
+- Mobile App Synchronization
+- Multiple Medicine Scheduling
+- EEPROM Storage
 
 ---
 
