@@ -5,16 +5,20 @@ Built on an ARM7 microcontroller (LPC2148), this system integrates a real-time c
 
 ---
 
-## 🚀 🧠 Motivation
+## 🎯 Project Objective
 
-Missing or delaying prescribed doses is a common issue, especially for elderly patients, people with chronic illnesses, and busy individuals.  
-Medication non-adherence can lead to:
-- Reduced treatment effectiveness
-- Worsening health conditions
-- Increased caregiver stress
-- Hospital readmissions and complications
+The objective of **DoseGuardian – Intelligent Pill-Taking Assistant** is to design and develop a real-time embedded system that ensures timely medication intake through automated scheduling and alert mechanisms.
 
-DoseGuardian addresses this challenge **with a user-friendly, real-time embedded solution** that reminds users to take medicines at the right time. :contentReference[oaicite:1]{index=1}
+This project aims to:
+
+- Develop a reliable **real-time medicine reminder system** using an ARM7 microcontroller.
+- Implement accurate time tracking using an integrated **Real-Time Clock (RTC)** module.
+- Design a user-friendly interface using a **16×2 LCD display and 4×4 matrix keypad**.
+- Trigger visual and audio alerts (LED & buzzer) when scheduled medicine time is reached.
+- Detect and indicate missed doses to improve medication adherence.
+- Demonstrate modular and structured **Embedded C firmware development**.
+
+The system focuses on improving healthcare compliance while showcasing practical embedded systems design and hardware-software integration skills.
 
 ---
 
@@ -43,8 +47,6 @@ Clean code organization with source and header files that make future enhancemen
 
 ---
 
----
-
 ## 📸 Simulation Results (Proteus Verification)
 
 The complete system was designed and validated using **Proteus Design Suite** to ensure correct functionality before hardware deployment.  
@@ -53,7 +55,7 @@ The simulation verifies RTC timing accuracy, user input handling, and medicine a
 ### 🖥️ 1️⃣ System Initialization & RTC Display
 The system initializes the Real-Time Clock and continuously displays the current time on the 16×2 LCD.
 
-![RTC Display](docs/images/proteus_rtc_display.png)
+![RTC Display](images/Rtc_display.png)
 
 **Verified:**
 - RTC time increment accuracy  
@@ -65,7 +67,7 @@ The system initializes the Real-Time Clock and continuously displays the current
 ### 💊 2️⃣ Medicine Time Configuration
 Users can configure medicine reminder timings using the 4×4 matrix keypad interface.
 
-![Medicine Configuration](docs/images/proteus_medicine_config.png)
+![Medicine Configuration](images/Med_time_config.png)
 
 **Verified:**
 - Keypad scanning logic  
@@ -80,7 +82,7 @@ When the RTC time matches the scheduled medicine time:
 - LED indicator blinks  
 - LCD displays reminder notification  
 
-![Medicine Alert](docs/images/proteus_medicine_alert.png)
+![Medicine Alert](images/Medicine_alert.png)
 
 **Verified:**
 - Time comparison algorithm  
@@ -92,7 +94,7 @@ When the RTC time matches the scheduled medicine time:
 ### ⚙️ 4️⃣ Complete Circuit Simulation
 Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer, and LED connections.
 
-![Complete Simulation](docs/images/proteus_full_simulation.png)
+![Complete Simulation](images/proteus_full_simulation.png)
 
 **Verified:**
 - Pin configuration correctness  
@@ -108,7 +110,6 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 ✔ Real-time medicine alert generation  
 ✔ Successful system-level validation before hardware implementation  
 
----
 ---
 
 ## 🧪 How It Works (User Flow)
@@ -181,7 +182,6 @@ Full Proteus schematic showing microcontroller, LCD, keypad, RTC module, buzzer,
 
 *Developed by:* **Korada Praveen Kumar**  
 Electronics and Communication Engineer 📡  
-(*Contact or portfolio links can be added here*) :contentReference[oaicite:14]{index=14}
 
 ---
 
