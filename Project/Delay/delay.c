@@ -35,3 +35,4 @@ void delay_s(u32 tdly)
     tdly*=12000000;       // Scale delay value for 1 second timing
 	  while(tdly--);      // Empty loop to create long time delay
 }
+
